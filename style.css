@@ -4,7 +4,7 @@
 	--color-white: #ffffff;
 	--color-light-white: #eeeeee;
 	--color-dark-white: #bdbdbd;
-	--color-light-purple: #e1cbffd2;
+	--color-light-purple: #ebdcffd2;
 	--color-purple: #ae80e7;
 	--color-dark-grey: #4d4d4d;
 	--color-grey: #616161;
@@ -13,7 +13,7 @@
 	--color-yellow: #fff7d1;
 	--color-orange: #feb546;
 	--color-black: #000000;
-	--color-dark-purple: #3d0364;
+	--color-dark-purple: #66318a;
 	--color-pink: #ff8ba4;
 	--color-lightdark-purple: #c4a3da;
 
@@ -431,4 +431,31 @@ p {
 
 .testimonial__speech-bubble a {
 	color: var(--color-purple);
+}
+
+/* Contect */
+
+#contact {
+	background-color: var(--color-lightdark-purple);
+}
+
+.contact__title,
+.contact__email,
+.contact__rights {
+	color: var(--color-white);
+}
+
+.contact__title {
+	margin: 32px 0;
+}
+
+.contact__links {
+	font-size: var(--font-large);
+	margin: 24px 0;
+}
+
+.contact__links i:hover {
+	transform: scale(1.1);
+	color: var(--color-dark-purple);
+	transition: all var(--animation-duration) ease-in;
 }
