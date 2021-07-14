@@ -19,7 +19,14 @@ navbarMenu.addEventListener('click', (event) => {
 	if (link == null) {
 		return;
 	}
+	navbarMenu.classList.remove('open');
 	scrollIntoView(link);
+});
+
+// Navbar toggle button for small screen
+const navbarToggleBtn = document.querySelector('.navbar__toggle-bnt');
+navbarToggleBtn.addEventListener('click', () => {
+	navbarMenu.classList.toggle('open');
 });
 
 // Handle click on "contact me" button on home
@@ -32,6 +39,7 @@ homeContactBtn.addEventListener('click', () => {
 const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
+	console.log(homeHeight);
 	home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
@@ -59,6 +67,13 @@ workBtnContainer.addEventListener('click', (e) => {
 	if (filter == null) {
 		return;
 	}
+
+	// Remove selection from the previous item and select the new one
+	const active = document.querySelector('.category__btn.selected');
+	active.classList.remove('selected');
+	const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+	target.classList.add('selected');
+
 	projectContainer.classList.add('anim-out');
 	setTimeout(() => {
 		Projects.forEach((project) => {

@@ -112,7 +112,6 @@ p {
 
 #navbar.navbar--dark {
 	background-color: var(--color-light-purple);
-	padding: 2px;
 }
 
 .navbar__menu {
@@ -121,12 +120,11 @@ p {
 
 .navbar__logo {
 	margin-left: 10px;
-	font-size: var(--font-medium);
-	font-weight: var(--weight-semi-bold);
+	margin-top: 5px;
 }
 
 .navbar__menu__item {
-	padding: 8px 12px;
+	padding: 6px 12px;
 	margin: 0 4px;
 	cursor: pointer;
 	border-radius: var(--size-border-radius);
@@ -137,14 +135,13 @@ p {
 }
 
 .navbar__menu__item:hover {
-	/* background-color: var(--color-lightdark-purple); */
 	color: var(--color-white);
 	transition: all var(--animation-duration) ease;
 }
 
 .navbar__toggle-bnt {
 	position: absolute;
-	top: 24px;
+	top: 15px;
 	right: 32px;
 	font-size: 24px;
 	color: var(--color-dark-purple);
@@ -316,7 +313,7 @@ p {
 
 /* Work */
 
-.work__categotise {
+.work__categories {
 	margin: 40px;
 }
 
@@ -327,22 +324,22 @@ p {
 	padding: 8px 48px;
 }
 
-.category__btn.active,
+.category__btn.selected,
 .category__btn:hover {
 	background-color: var(--color-purple);
 	color: var(--color-white);
 }
 
-.category__btn.active .category__count,
+.category__btn.selected .category__count,
 .category__btn:hover .category__count {
 	opacity: 1;
 	top: 0;
 }
 
 .category__count {
-	background-color: var(--color-orange);
+	background-color: var(--color-white);
 	border-radius: 50%;
-	color: var(--color-white);
+	color: var(--color-purple);
 	width: 24px;
 	height: 24px;
 	line-height: 24px;
@@ -408,7 +405,7 @@ p {
 }
 
 .project__description h3 {
-	color: var(--color-white);
+	color: var(--color-pink);
 }
 
 .project__description h3:after {
@@ -416,9 +413,9 @@ p {
 	display: block;
 	position: relative;
 	left: 50%;
-	width: 25px;
-	height: 2px;
-	margin-left: -12px;
+	width: 70px;
+	height: 1px;
+	transform: translateX(-50%);
 	margin-top: 8px;
 	background-color: var(--color-dark-white);
 }
@@ -466,7 +463,7 @@ p {
 	color: var(--color-purple);
 }
 
-/* Contect */
+/* Content */
 
 #contact {
 	background-color: var(--color-lightdark-purple);
@@ -516,28 +513,41 @@ p {
 	.navbar__toggle-bnt {
 		display: block;
 	}
+
 	#navbar {
 		flex-direction: column;
 		align-items: flex-start;
+		background-color: var(--color-light-purple);
 	}
+
 	.navbar__menu {
 		flex-direction: column;
 		text-align: center;
 		margin: auto;
 		display: none;
 	}
+
+	.navbar__menu.open {
+		display: block;
+		padding: 10px;
+	}
+
 	.about__majors {
 		flex-direction: column;
 	}
+
 	.major {
 		margin-bottom: 38px;
 	}
+
 	.skillset {
 		flex-direction: column;
 	}
+
 	.project {
 		flex-grow: 1;
 	}
+
 	.testimonial__avatar {
 		width: 80px;
 		height: 80px;
